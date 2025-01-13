@@ -1,47 +1,33 @@
 NAME		= ircserv
 
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -I $(INCDIR)
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -g -I $(INCDIR)
 
 SRCDIR		= src
 INCDIR		= inc
 OBJDIR		= obj
 
-SRC			= main Channel Client Command
+SRC			= main Server Client
 SRCS		= $(addprefix $(SRCDIR)/, $(addsuffix .cpp, $(SRC)))
 OBJS		= $(addprefix $(OBJDIR)/, $(SRC:=.o))
 
-all: $(NAME) uc
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
-	@echo "Compilation success !\n"
 
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
-	@echo "Compiling $<"
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	@rm -rf $(OBJDIR)
-	@echo "Remove objects."
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "Full clear."
 
 re: fclean all
 
-uc:
-	@echo "===== Use case ====="
-	@echo "./$(NAME)"
-
-debug: CXXFLAGS += -g
-debug: re
-
-bearhate:
-	compiledb make
-
-.PHONY: all clean fclean re debug uc
+.PHONY: all clean fclean re
