@@ -139,4 +139,10 @@ class CommandHandler {
 		    ChannelManager& channelManager);
     void handleInvite(int fd, const std::vector<std::string>& args, ClientManager& userManager,
 		      ChannelManager& channelManager);
+    void handleQuit(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+            ChannelManager& channelManager);
+    void handlePart(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+            ChannelManager& channelManager);
+    void handleMsg(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+            ChannelManager& channelManager);
 };
