@@ -7,7 +7,7 @@ SRCDIR		= src
 INCDIR		= inc
 OBJDIR		= obj
 
-SRC			= main
+SRC			= main Channel Client Command
 SRCS		= $(addprefix $(SRCDIR)/, $(addsuffix .cpp, $(SRC)))
 OBJS		= $(addprefix $(OBJDIR)/, $(SRC:=.o))
 
@@ -40,5 +40,8 @@ uc:
 
 debug: CXXFLAGS += -g
 debug: re
+
+bearhate:
+	compiledb make
 
 .PHONY: all clean fclean re debug uc

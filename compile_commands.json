@@ -1,0 +1,90 @@
+[
+ {
+  "directory": ".",
+  "command": "c++ -Wall -Wextra -Werror -std=c++98 -I inc -c src/main.cpp -o obj/main.o",
+  "file": "obj/main.o"
+ },
+ {
+  "directory": ".",
+  "command": "c++ -Wall -Wextra -Werror -std=c++98 -I inc -c src/Channel.cpp -o obj/Channel.o",
+  "file": "obj/Channel.o"
+ },
+ {
+  "directory": ".",
+  "command": "c++ -Wall -Wextra -Werror -std=c++98 -I inc -c src/Client.cpp -o obj/Client.o",
+  "file": "obj/Client.o"
+ },
+ {
+  "directory": ".",
+  "command": "c++ -Wall -Wextra -Werror -std=c++98 -I inc -c src/Command.cpp -o obj/Command.o",
+  "file": "obj/Command.o"
+ },
+ {
+  "directory": "/home/tle-dref/42/ft_irc",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-I",
+   "inc",
+   "-c",
+   "src/main.cpp",
+   "-o",
+   "obj/main.o"
+  ],
+  "file": "src/main.cpp"
+ },
+ {
+  "directory": "/home/tle-dref/42/ft_irc",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-I",
+   "inc",
+   "-c",
+   "src/Channel.cpp",
+   "-o",
+   "obj/Channel.o"
+  ],
+  "file": "src/Channel.cpp"
+ },
+ {
+  "directory": "/home/tle-dref/42/ft_irc",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-I",
+   "inc",
+   "-c",
+   "src/Client.cpp",
+   "-o",
+   "obj/Client.o"
+  ],
+  "file": "src/Client.cpp"
+ },
+ {
+  "directory": "/home/tle-dref/42/ft_irc",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-I",
+   "inc",
+   "-c",
+   "src/Command.cpp",
+   "-o",
+   "obj/Command.o"
+  ],
+  "file": "src/Command.cpp"
+ }
+]
