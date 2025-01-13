@@ -111,38 +111,36 @@ class CommandHandler {
 	: _clientManager(clientMgr), _channelManager(chanMgr) {}
 
     // Commandes d'authentification
-    void handleNick(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleNick(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		    ChannelManager& channelManager);
-    void handleUser(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleUser(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		    ChannelManager& channelManager);
-    void handlePass(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handlePass(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		    ChannelManager& channelManager);
 
     // Commandes de gestion de channels
-    void handleJoin(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleJoin(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		    ChannelManager& channelManager);
-    void handlePart(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handlePart(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		    ChannelManager& channelManager);
-    void handleTopic(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleTopic(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		     ChannelManager& channelManager);
-    void handleMode(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleMode(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		    ChannelManager& channelManager);
 
     // Commandes de messagerie
-    void handlePrivmsg(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handlePrivmsg(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		       ChannelManager& channelManager);
-    void handleNotice(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleNotice(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		      ChannelManager& channelManager);
 
     // Commandes de gestion
-    void handleKick(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleKick(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		    ChannelManager& channelManager);
-    void handleInvite(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleInvite(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
 		      ChannelManager& channelManager);
-    void handleQuit(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleQuit(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
             ChannelManager& channelManager);
-    void handlePart(int fd, const std::vector<std::string>& args, ClientManager& userManager,
-            ChannelManager& channelManager);
-    void handleMsg(int fd, const std::vector<std::string>& args, ClientManager& userManager,
+    void handleMsg(int clientFd, const std::vector<std::string>& args, ClientManager& userManager,
             ChannelManager& channelManager);
 };
