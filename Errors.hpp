@@ -9,6 +9,8 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
+#define SERVER_NAME "IRCserv"
+
 void	error_443(Client* client, Channel* channel);
 void	error_441(Client* client, Channel* channel);
 void	error_476(Client* client, Channel* channel);
