@@ -2,11 +2,11 @@
 
 // DEBUGGAGE
 // Simuler la fonction send pour tester
-ssize_t send(int fd, const char* buf, size_t len, int flags) {
-	std::cout << "Sending message to fd " << fd << ": " << std::string(buf, len) << std::endl;
-	std::cout << "Message length: " << len << std::endl;
-	return len;  // Simuler l'envoi avec succès
-}
+// ssize_t send(int fd, const char* buf, size_t len, int flags) {
+// 	std::cout << "Sending message to fd " << fd << ": " << std::string(buf, len) << std::endl;
+// 	std::cout << "Message length: " << len << std::endl;
+// 	return len;  // Simuler l'envoi avec succès
+// }
 
 // void error_443(Client* client, Channel* channel);
 void error_443(Client* client, Channel* channel)
