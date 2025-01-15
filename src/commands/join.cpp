@@ -40,6 +40,6 @@ void Server::doJoin(const TokenisedCommand &cmd, int fd) {
 
   // Envoyer la confirmation
   std::string joinMsg =
-      ":" + _clients.getClient(fd)->nickname + " JOIN " + channelName + "\r\n";
+      ":" + _clients.getClient(fd)->nickname + "!@GLMRC JOIN " + channelName + "\n";
   _channels.notifyChannel(joinMsg, channelName);
 }
